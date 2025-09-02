@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jurnal Kegiatan PKL | Lisa</title>
+    <meta name="description" content="Template website jurnal kegiatan PKL yang modern, mewah, dan responsif untuk siswa magang/PKL." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#f5f8ff',
+                100: '#e8efff',
+                200: '#cddcff',
+                300: '#a5bdff',
+                400: '#7a98ff',
+                500: '#4a6dff',
+                600: '#2c51f6',
+                700: '#1f3fd3',
+                800: '#1c36a8',
+                900: '#182f87',
+              },
+            },
+            boxShadow: {
+              lux: '0 10px 30px -5px rgba(0,0,0,0.25), 0 8px 16px -8px rgba(0,0,0,0.2)',
+            },
+            backgroundImage: {
+              'glass-gradient':
+                'linear-gradient(135deg, rgba(255,255,255,0.85), rgba(255,255,255,0.55))',
+              'glass-gradient-dark':
+                'linear-gradient(135deg, rgba(24,24,27,0.85), rgba(24,24,27,0.55))',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+
+  <body class="bg-gradient-to-br from-brand-50 via-white to-brand-100 dark:from-zinc-900 dark:via-zinc-900 dark:to-zinc-800 text-zinc-800 dark:text-zinc-100 font-display">
+    <header class="fixed top-0 left-0 right-0 z-40">
+  <nav id="navbar" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-4">
+    <div class="glass shadow-lux rounded-2xl bg-glass-gradient dark:bg-glass-gradient-dark">
+      <div class="flex items-center justify-between p-3 sm:p-4">
+        <a href="#home" class="flex items-center gap-3">
+          <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 shadow-lux"></div>
+          <div class="leading-tight">
+            <p class="text-sm uppercase tracking-widest text-brand-700 dark:text-brand-300">Jurnal PKL</p>
+            <h1 class="text-xl sm:text-2xl font-extrabold">Kegiatan Magang Saya</h1>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="#about" class="px-4 py-2 rounded-xl hover:bg-brand-50 dark:hover:bg-zinc-800">Tentang</a>
+          <a href="#timeline" class="px-4 py-2 rounded-xl hover:bg-brand-50 dark:hover:bg-zinc-800">Jurnal</a>
+          <a href="#mentors" class="px-4 py-2 rounded-xl hover:bg-brand-50 dark:hover:bg-zinc-800">Pembimbing</a>
+          <a href="#contact" class="px-4 py-2 rounded-xl hover:bg-brand-50 dark:hover:bg-zinc-800">Kontak</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" class="p-2 rounded-xl hover:bg-brand-50 dark:hover:bg-zinc-800" aria-label="Toggle theme">
+            <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6 hidden">
+              <path d="M12 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/>
+            </svg>
+            <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6 hidden">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+            </svg>
+          </button>
+          <button id="menuBtn" class="md:hidden p-2 rounded-xl hover:bg-brand-50 dark:hover:bg-zinc-800 relative w-10 h-10 flex items-center justify-center" aria-label="Toggle menu">
+            <svg id="iconHamburger" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transition-all duration-300 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute transition-all duration-300 ease-in-out opacity-0 scale-75" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 transition-all duration-300 ease-in-out transform opacity-0 -translate-y-4">
+        <div class="flex flex-col gap-2">
+          <a href="#about" class="px-4 py-3 rounded-xl hover:bg-brand-50 dark:hover:bg-zinc-800">Tentang</a>
+          <a href="#timeline" class="px-4 py-3 rounded-xl hover:bg-brand-50 dark:hover:bg-zinc-800">Jurnal</a>
+          <a href="#mentors" class="px-4 py-3 rounded-xl hover:bg-brand-50 dark:hover:bg-zinc-800">Pembimbing</a>
+          <a href="#contact" class="px-4 py-3 rounded-xl hover:bg-brand-50 dark:hover:bg-zinc-800">Kontak</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header> 
+    <section id="home" class="pt-40 pb-24 relative overflow-hidden">
+      <div class="absolute inset-0 -z-10 opacity-40 dark:opacity-30" aria-hidden="true">
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="url(#grad)" d="M0,256L80,229.3C160,203,320,149,480,149.3C640,149,800,203,960,186.7C1120,171,1280,85,1360,42.7L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"/><defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#a5bdff"/><stop offset="100%" stop-color="#4a6dff"/></linearGradient></defs></svg>
+      </div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 items-center reveal">
+          <div>
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 dark:bg-zinc-800/70 border border-brand-200 dark:border-zinc-700 shadow-sm">
+              <span class="h-2 w-2 rounded-full bg-brand-500 animate-pulse"></span>
+              <span class="text-xs font-semibold tracking-wide">Program PKL Berjalan Di Glass Pro</span>
+            </span>
+            <h2 class="mt-6 text-4xl sm:text-5xl font-extrabold leading-tight">
+              Dokumentasi <span class="bg-gradient-to-r from-brand-500 to-brand-700 bg-clip-text text-transparent">Joernal Magang</span> Saya.
+            </h2>
+            <p class="mt-4 text-lg text-zinc-600 dark:text-zinc-300">
+                Tempat Kerja atau Magang saya di Glass Pro,
+                saya mendapatkan banyak peluang pengalaman bersama Glass Pro.
+                Disana saya banyak belajar tentang cetak, lembox, dan lain lainnya
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-3">
+              <a href="#timeline" class="px-6 py-3 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow-lux">Kegiatan Ku</a>
+              <a href="https://wa.me/+18737102252" class="px-6 py-3 rounded-2xl border border-zinc-300 dark:border-zinc-700 hover:bg-white/70 dark:hover:bg-zinc-800/70 font-semibold">Kontak Saya</a>
+            </div>
+          </div>
+          <div class="relative reveal">
+            <div class="aspect-[4/3] rounded-3xl shadow-lux overflow-hidden ring-1 ring-zinc-200/60 dark:ring-zinc-700/60">
+              <img src="./asset/LogoGlassPro.jpg" alt="Ilustrasi siswa PKL bekerja di kantor" class="h-full w-full object-cover" />
+            </div>
+            <div class="absolute -bottom-6 -left-6 bg-white/90 dark:bg-zinc-900/90 rounded-2xl shadow-lux p-4 border border-zinc-200 dark:border-zinc-800">
+              <p class="text-sm font-semibold">Lokasi PKL</p>
+              <p class="text-xs text-zinc-500">PT. Glass Pro Indonesia, Kp. Baru Tambakoso</p>
+            </div>
+            <div class="absolute -top-6 -right-6 bg-white/90 dark:bg-zinc-900/90 rounded-2xl shadow-lux p-4 border border-zinc-200 dark:border-zinc-800">
+              <p class="text-sm font-semibold">Periode</p>
+              <p class="text-xs text-zinc-500">Jan – Mar 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="about" class="py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div class="reveal">
+            <h3 class="text-3xl sm:text-4xl font-extrabold mb-4">Tentang Program PKL</h3>
+            <p class="text-zinc-600 dark:text-zinc-300">PKL (Praktik Kerja Lapangan) memberikan kesempatan kepada saya untuk mengaplikasikan ilmu di dunia kerja. Website Saya ini membantu mendokumentasikan aktivitas harian saya bersama Glass Pro, kompetensi yang dipelajari, serta bukti foto kegiatan secara rapi.</p>
+            <ul class="mt-6 space-y-3 text-zinc-700 dark:text-zinc-300">
+              <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-brand-600"></span>Mengikuti dibagian produksi disana saya belajar cara toolkit hg/tg ,cetak finil,lembox hg/tg,dan ikut rakit orderan.</li>
+              <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-brand-600"></span>Bagian packing disana saya belajar bagaimana caranya packing orderan tempered glass</li>
+              <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-brand-600"></span>Saya di berikan bagian live shoppe, saya belajar bagaimana live di aplikasi shoppe untuk penjualan produk</li>
+            </ul>
+          </div>
+          <div class="reveal grid grid-cols-2 gap-4">
+            <div class="rounded-3xl overflow-hidden shadow-lux ring-1 ring-zinc-200/60 dark:ring-zinc-700/60">
+              <img src="./asset/ProdukGlass.jpg" alt="Siswa berdiskusi dalam tim" class="h-full w-full object-cover" />
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-lux ring-1 ring-zinc-200/60 dark:ring-zinc-700/60">
+              <img src="./asset/KegiatanCetak.jpg" alt="Kegiatan presentasi di kantor" class="h-full w-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline / Jurnal Harian -->
+    <section id="timeline" class="py-20 bg-white/60 dark:bg-zinc-900/60">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex items-end justify-between mb-8">
+          <div>
+            <h3 class="text-3xl sm:text-4xl font-extrabold">Jurnal Kegiatan</h3>
+            <p class="text-zinc-600 dark:text-zinc-400">Rekam aktivitas harian siswa selama PKL.</p>
+          </div>
+          <button id="addEntryBtn" class="px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow">+ Entri</button>
+        </div>
+
+        <div id="timelineList" class="relative">
+          <div class="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-brand-300 via-brand-200 to-transparent"></div>
+          <ul class="space-y-8">
+            <li class="reveal">
+              <div class="grid sm:grid-cols-2 gap-6 items-start">
+                <div class="order-2 sm:order-1 sm:pr-8">
+                  <div class="rounded-2xl p-5 bg-white/80 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-700">Hari 1</span>
+                      <time class="text-xs text-zinc-500">02 Agustus 2025</time>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">ReStok Bahan Baku Produksi</h4>
+                    <p class="text-zinc-700 dark:text-zinc-300">Membantu cek dan restok bahan baku untuk produksi contoh memastikan barang sampai tepat waktu dan tidak ada bahan yang kosong diproduksi agar tidak ada keterlambatan pengiriman orderan</p>
+                    <div class="mt-4 flex gap-2 flex-wrap">
+                      <span class="px-2.5 py-1 rounded-full text-[11px] bg-zinc-100 dark:bg-zinc-700">Onboarding</span>
+                      <span class="px-2.5 py-1 rounded-full text-[11px] bg-zinc-100 dark:bg-zinc-700">Restok Produk</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-1 sm:order-2 sm:pl-8">
+                  <div class="aspect-[16/10] rounded-2xl overflow-hidden shadow-lux ring-1 ring-zinc-200/60 dark:ring-zinc-700/60">
+                    <img src="./asset/kegiatanHari1.jpg" alt="Briefing orientasi di kantor" class="h-full w-full object-cover" />
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="reveal">
+              <div class="grid sm:grid-cols-2 gap-6 items-start">
+                <div class="sm:pr-8 order-2 sm:order-2">
+                  <div class="rounded-2xl p-5 bg-white/80 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-700">Hari 2</span>
+                      <time class="text-xs text-zinc-500">03 Jan 2025</time>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Melayani Client</h4>
+                    <p class="text-zinc-700 dark:text-zinc-300">Membantu pelayanan customer,contohnya membantu balas chat dari customer,menyelesaikan masalah complaint dan data penjualan.</p>
+                    <div class="mt-4 flex gap-2 flex-wrap">
+                      <span class="px-2.5 py-1 rounded-full text-[11px] bg-zinc-100 dark:bg-zinc-700">ActService</span>
+                      <span class="px-2.5 py-1 rounded-full text-[11px] bg-zinc-100 dark:bg-zinc-700">Layanan</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="sm:pl-8 order-1 sm:order-1">
+                  <div class="aspect-[16/10] rounded-2xl overflow-hidden shadow-lux ring-1 ring-zinc-200/60 dark:ring-zinc-700/60">
+                    <img src="./asset/KegiatanHari2jpg.jpg" alt="Instalasi jaringan oleh siswa" class="h-full w-full object-cover" />
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div class="reveal">
+            <h3 class="text-3xl sm:text-4xl font-extrabold mb-4">Kontak</h3>
+            <p class="text-zinc-600 dark:text-zinc-300">Ada pertanyaan terkait jurnal atau butuh verifikasi pembimbing? Silakan hubungi kami.</p>
+            <div class="mt-6 space-y-3 text-zinc-700 dark:text-zinc-300">
+              <p>📍 Alamat: Jl. Contoh No. 123, Surabaya</p>
+              <p>✉️ Email: pkl@sekolah.sch.id</p>
+              <p>☎️ Telepon: (031) 123456</p>
+            </div>
+          </div>
+          <form id="contactForm" class="reveal rounded-3xl p-6 bg-white/80 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 shadow-lux">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm font-semibold" for="name">Nama</label>
+                <input id="name" required class="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-700 bg-transparent px-4 py-3" placeholder="Nama lengkap" />
+              </div>
+              <div>
+                <label class="text-sm font-semibold" for="email">Email</label>
+                <input id="email" type="email" required class="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-700 bg-transparent px-4 py-3" placeholder="email@domain.com" />
+              </div>
+            </div>
+            <div class="mt-4">
+              <label class="text-sm font-semibold" for="message">Pesan</label>
+              <textarea id="message" rows="4" required class="mt-2 w-full rounded-xl border border-zinc-300 dark:border-zinc-700 bg-transparent px-4 py-3" placeholder="Tulis pesan..." ></textarea>
+            </div>
+            <div class="mt-6 flex items-center justify-between">
+              <p id="formStatus" class="text-sm text-zinc-500"></p>
+              <button class="px-6 py-3 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow">Kirim</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-10 border-t border-zinc-200 dark:border-zinc-800">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-sm text-zinc-500">© <span id="year"></span> Jurnal PKL. All rights reserved.</p>
+        <div class="flex gap-3 text-sm">
+          <a href="#" class="hover:underline">Kebijakan Privasi</a>
+          <span>•</span>
+          <a href="#" class="hover:underline">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 hidden z-50 items-center justify-center bg-black/80 p-4">
+      <button id="lightboxClose" class="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20" aria-label="Tutup">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-white"><path d="M6.225 4.811 4.811 6.225 10.586 12l-5.775 5.775 1.414 1.414L12 13.414l5.775 5.775 1.414-1.414L13.414 12l5.775-5.775-1.414-1.414L12 10.586 6.225 4.811Z"/></svg>
+      </button>
+      <img id="lightboxImage" src="" alt="Preview gambar" class="max-h-[90vh] rounded-2xl shadow-lux" />
+      <div id="lightboxCaption" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/90 text-sm"></div>
+    </div>
+
+    <!-- Floating Back-to-Top -->
+    <button id="toTop" class="hidden fixed bottom-6 right-6 z-40 p-3 rounded-full bg-brand-600 text-white shadow-lux hover:bg-brand-700" aria-label="Kembali ke atas">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 5l7 7-1.4 1.4L13 9.8V20h-2V9.8l-4.6 3.6L5 12l7-7z"/></svg>
+    </button>
+
+    <script src="./js/index.js">
+    </script>
+  </body>
+</html>
